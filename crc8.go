@@ -1,15 +1,4 @@
 package main
-/*
-// http://www.sunshine2k.de/articles/coding/crc/understanding_crc.html
-// http://programm.ws/page.php?id=663
-// http://ru.bmstu.wiki/%D0%97%D0%B5%D1%80%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_CRC32_(asm_x86)
-// http://www.zlib.net/crc_v3.txt
-
-// Online check tool: https://www.ghsi.de/CRC/index.php?Polynom=100010011&Message=12345678
-
-CRC supported list : http://protocoltool.sourceforge.net/CRC%20list.html
-
-*/
 
 import "fmt"
 
@@ -26,12 +15,8 @@ func main() {
 
 	crcInit()
 
-	//printByteAsHex(crc8table)
-
-	//printByteAsHex(b)
 	fmt.Printf("crc: 0x%x\n", crc8(b))
 	fmt.Printf("crc fast %08b\n", crc8fast(b))
-	//fmt.Printf("0x%x\n", crc8table[0x1f])
 }
 
 func crc8(b []byte) byte {
